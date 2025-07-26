@@ -9,7 +9,7 @@ import { Badge } from "../ui/badge";
 interface Props {
   _id: string;
   name: string;
-  questions: number;
+  questions?: number;
   showCount?: boolean;
   compact?: boolean;
 }
@@ -23,7 +23,6 @@ const TagCard = ({ _id, name, questions, showCount, compact }: Props) => {
         <div className="flex-center space-x-2">
           <i className={`${iconClass} text-sm`}></i>
           <span>{name}</span>
-          <span>{compact}</span>
         </div>
       </Badge>
 
